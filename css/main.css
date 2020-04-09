@@ -5,6 +5,38 @@ body {
 	width: 100%;
 }
 
+#toolbar {
+	display: inline;
+	border-bottom: 1px;
+	padding-bottom: 10px;
+	padding-top: 8px;
+	padding-left: 8px;
+	top: 0;
+	max-width: 70vw;
+	width: 70vw;
+	min-height: 1.2em;
+	left: 0;
+	right: 0;
+	position: absolute;
+	top: 0;
+	margin: 0 auto;
+	vertical-align: middle;
+	text-align: center;
+	border-bottom: 2px ridge;
+	z-index: 20;
+	background-color: white;
+	opacity: 0.2;
+}
+
+#toolbar:hover{
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	opacity: 0.9;
+}
+
+#top-bar button{
+	margin: 5px;
+}
+
 #text {
 	writing-mode: vertical-rl;
 	text-orientation: upright;
