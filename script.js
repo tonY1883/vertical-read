@@ -1,15 +1,15 @@
 var CONVERTED_PUNCTUATION = {
-	"—":"〡",
-	"〞":"﹁",
-	"〝":"﹂",
-	"「":"﹁",
-	"」":"﹂",
-	"…":"⋮",
-	"\\.\\.\\.":"⋮",
-	"?":"？",
-	":":"：",
-	";":"；",
-	"!":"！",
+	"—": "〡",
+	"〞": "﹁",
+	"〝": "﹂",
+	"「": "﹁",
+	"」": "﹂",
+	"…": "⋮",
+	"\\.\\.\\.": "⋮",
+	"\\?": "？",
+	":": "：",
+	";": "；",
+	"!": "！",
 };
 
 var fileSelector = document.getElementById("file_input");
@@ -22,6 +22,12 @@ fileSelector.addEventListener('change', () => {
 		prepareText(contents);
 	};
 	reader.readAsText(file);
+});
+
+var fontSizeSelector = document.getElementById("font_size");
+fontSizeSelector.addEventListener('change', () => {
+	let fontSize = fontSizeSelector.value;
+	document.getElementById("text").style.fontSize = (fontSize + "rem");
 });
 
 function prepareText(inputString) {
@@ -39,7 +45,6 @@ function showText(paragraphs) {
 		let content = paragraphs[index];
 		for (let [key, value] of Object.entries(CONVERTED_PUNCTUATION)) {
 			let re = new RegExp(key, "g");
-			console.log("reaplcing " + key + " with  " + value);
 			content = content.replace(re, value);
 		}
 		html += "<p>" + content + "</p>";
