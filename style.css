@@ -1,3 +1,14 @@
+/* fonts */
+@font-face {
+	font-family: "Noto Sans";
+	src: url("fonts/Noto_Sans_TC/NotoSansTC-Regular.otf") format("opentype");
+}
+
+@font-face {
+	font-family: "Noto Serif";
+	src: url("fonts/Noto_Serif_TC/NotoSerifTC-Regular.otf") format("opentype");
+}
+
 body {
 	margin: 0;
 	height: 100%;
@@ -19,7 +30,6 @@ body {
 	left: 0;
 	right: 0;
 	position: absolute;
-	top: 0;
 	margin: 0 auto;
 	vertical-align: middle;
 	text-align: center;

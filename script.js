@@ -30,6 +30,11 @@ fontSizeSelector.addEventListener('change', () => {
 	document.getElementById("text").style.fontSize = (fontSize + "rem");
 });
 
+var fontSelector = document.getElementById("font_select");
+fontSelector.addEventListener('change', () => {
+	document.getElementById("text").style.fontFamily = fontSelector.options[fontSelector.selectedIndex].value;
+});
+
 function prepareText(inputString) {
 	var paragraphs = inputString.split(/[\r\n]+/);
 
