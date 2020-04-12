@@ -35,6 +35,16 @@ fontSelector.addEventListener('change', () => {
 	document.getElementById("text").style.fontFamily = fontSelector.options[fontSelector.selectedIndex].value;
 });
 
+var bgColorSelector = document.getElementById("bg_color");
+bgColorSelector.addEventListener('change', () => {
+	document.getElementById("text").style.backgroundColor = bgColorSelector.value;
+});
+
+var fgColorSelector = document.getElementById("fg_color");
+fgColorSelector.addEventListener('change', () => {
+	document.getElementById("text").style.color = fgColorSelector.value;
+});
+
 function prepareText(inputString) {
 	var paragraphs = inputString.split(/[\r\n]+/);
 
